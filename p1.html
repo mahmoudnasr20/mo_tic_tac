@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+ <script>  
+ 
+ function validateFullNameAndEmail() {
+  var fullName = prompt("Enter your full name:");
+  var email = prompt("Enter your email address:");
+  
+  var fullNameRegex = /^[A-Za-z]{4,}( [A-Za-z]{4,})*$/;
+  var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\.eg$/;
+  
+  if (fullNameRegex.test(fullName) && emailRegex.test(email)) {
+    alert("Full name and email are valid.");
+  } else {
+    alert("Full name or email is not valid. Please try again.");
+    validateFullNameAndEmail();
+  }
+}
+
+validateFullNameAndEmail();</script>
+ 
+ 
+  </head>
+  <body  >
+  
+   </body>
+</html>
